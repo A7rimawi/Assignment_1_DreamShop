@@ -15,7 +15,7 @@ public class CartAdapter extends BaseAdapter {
     private final Context context;
     private final List<Item> items;
 
-    public CartAdapter(Context context, List<Item> items) {
+    public  CartAdapter(Context context, List<Item> items) {
         this.context = context;
         this.items = items;
     }
