@@ -6,7 +6,12 @@ public class Item {
     private String calories;
     private int imageResId;
     private int quantity;
+    private String price; // keep as String for simplicity
 
+    public Item(String name, String price) {
+        this.name = name;
+        this.price = price;
+    }
     public Item(String name, String time, String calories, int imageResId, int quantity) {
         this.name = name;
         this.time = time;
@@ -17,7 +22,11 @@ public class Item {
     public Item(String name) {
         this.name = name;
     }
+    public String getPrice() { return price; }
 
+    public String toDisplayString() {
+        return name + " - $" + price;
+    }
 
     public String getName() { return name; }
     public String getTime() { return time; }
